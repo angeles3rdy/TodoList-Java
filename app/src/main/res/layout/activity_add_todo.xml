@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnAddToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_alignParentEnd="true"
+        android:background="@null"/>
+
+    <EditText
+        android:id="@+id/tbAddTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="30pt"
+        android:hint="Title" />
+
+    <EditText
+        android:id="@+id/tbDateLabel"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tbAddTitle"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/datelabelbg"
+        android:enabled="false"
+        android:fontFamily="sans-serif-medium"
+        android:hint="@string/select_date"
+        android:padding="8dp"
+        android:textColor="#262626"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/btnSelectDate"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/baseline_calendar_month_24"
+        android:layout_alignEnd="@id/tbDateLabel"
+        android:layout_marginTop="58pt"
+        android:background="@null"/>
+
+    <EditText
+        android:id="@+id/tbTimeLabel"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tbDateLabel"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/datelabelbg"
+        android:enabled="false"
+        android:fontFamily="sans-serif-medium"
+        android:hint="@string/time"
+        android:padding="8dp"
+        android:textColor="#262626"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/btnSelectTime"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@id/tbTimeLabel"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="95pt"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/baseline_access_time_24" />
+
+    <ScrollView
+        android:layout_below="@id/tbTimeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="8dp"
+            android:id="@+id/todo_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <EditText
+            android:padding="16dp"
+            android:id="@+id/todo_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What do you need to do?"
+            android:background="@drawable/datelabelbg"
+            android:singleLine="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
